@@ -1,0 +1,32 @@
+header {
+  background-color: #f7f7f7;
+  padding: 10px 0;
+
+  .container {
+    max-width: 1140px;
+    margin: auto;
+
+    .header_main {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+        padding: 0;
+
+        li {
+          font-size: 16px;
+          font-weight: 500;
+          transition: 0.4s;
+
+          &:hover {
+            color: #ef7c2c;
+            transition: 0.4s;
+          }
+        }
+      }
+    }
+  }
+}

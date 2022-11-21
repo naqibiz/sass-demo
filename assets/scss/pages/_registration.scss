@@ -1,0 +1,140 @@
+// variables
+$color--primary: blueviolet;
+$theme--color: #ef7c2c;
+$white--color: #ffff;
+$black--color: #1a1a1a;
+// variables
+
+.registration_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+  }
+
+  .registration_content {
+    max-width: 700px;
+    background-color: #ffff;
+    box-shadow: 0px 0px 8px #00000029;
+    padding: 20px 30px;
+
+    p {
+      font-size: 15px;
+
+      &:last-child {
+        padding-top: 25px;
+      }
+    }
+    form {
+      padding-top: 30px;
+
+      .form_row {
+        display: flex;
+        gap: 30px;
+
+        .form_group_half {
+          &:last-child {
+            max-width: 150px;
+          }
+        }
+
+        .form_group {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 22px;
+          width: 100%;
+
+          label {
+            font-size: 15px;
+            font-weight: 700;
+
+            span {
+              color: $theme--color;
+            }
+          }
+
+          input {
+            border: 1px solid rgba(26, 26, 26, 0.2);
+            height: 50px;
+            margin-top: 10px;
+            padding: 0.375rem 0.75rem;
+
+            &:focus-visible {
+              outline: 0 !important;
+            }
+            &:focus {
+              border: 1px solid rgb(26 26 26 / 67%);
+            }
+          }
+        }
+      }
+
+      .form_group_checkbox {
+        .container {
+          position: relative;
+          padding-left: 35px;
+          margin-bottom: 12px;
+          cursor: pointer;
+          user-select: none;
+          display: flex;
+          font-size: 15px;
+          padding-left: 40px;
+
+          &:last-child {
+            margin-top: 22px;
+          }
+
+          input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked + .checkmark {
+              background-color: #ef7c2c;
+              &:after {
+                left: 7.3px;
+                top: 4.3px;
+                width: 5px;
+                height: 9px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+
+        .checkmark {
+          position: absolute;
+          top: 3px;
+          left: 0;
+          height: 23px;
+          width: 23px;
+          background-color: #eee;
+          &:after {
+            content: "";
+            position: absolute;
+          }
+        }
+      }
+    }
+    button {
+      background-color: $theme--color;
+      border: 0;
+      color: white;
+      padding: 15px 15px;
+      font-size: 15px;
+      cursor: pointer;
+      display: block;
+      margin: 70px 0 0 auto;
+    }
+  }
+}
