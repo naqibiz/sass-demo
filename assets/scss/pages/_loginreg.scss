@@ -1,10 +1,3 @@
-// variables
-$color--primary: blueviolet;
-$theme--color: #ef7c2c;
-$white--color: #ffff;
-$black--color: #1a1a1a;
-// variables
-
 .login_reg_main {
   padding: 50px 0;
   .login_reg_content {
@@ -157,6 +150,15 @@ $black--color: #1a1a1a;
         margin-top: 55px;
         cursor: pointer;
       }
+    }
+  }
+}
+
+@include response(medium-device) {
+  .login_reg_main {
+    padding: 50px 20px;
+    h1 {
+      font-size: 25px;
     }
   }
 }
